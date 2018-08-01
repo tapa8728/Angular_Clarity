@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-user',
   //template: '<h2> John Doe </h2>'
-  templateUrl: './components/user/user.components.html',
+  templateUrl: './user.components.html',
 })
 
 // step3: define a class for this component.
