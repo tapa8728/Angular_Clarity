@@ -10,6 +10,9 @@ import {ClarityModule} from 'clarity-angular';
 import {ClarityIcons} from 'clarity-icons';
 
 import {AppComponent} from './app.component';
+// step1: Add new components here
+import {UserComponent} from './components/user/user.component';
+
 import {ChassisService} from './services/chassis.service';
 import {HostsService} from './services/hosts.service';
 import {ModalConfigService} from './services/modal.service';
@@ -50,8 +53,8 @@ export function createTranslateLoader(http: HttpClient) {
       HttpModule,
       AppRoutingModule,
       BrowserAnimationsModule
-   ],
-   declarations: [AppComponent,
+   ], // step2: add new components declarations too.
+   declarations: [AppComponent, UserComponent,
       routableComponents,
       SummaryComponent,
       MonitorComponent,
