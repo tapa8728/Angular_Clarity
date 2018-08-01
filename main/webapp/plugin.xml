@@ -27,8 +27,8 @@
       <dependency type="css" uri="html-sample/assets/css/plugin-icons.css" />
    </dependencies>
 
-   <!-- Plugin Navigator Main Entry Point -->
-   <extension id="com.vmware.samples.htmlsample.entryPoint">
+   <!-- Plugin Navigator Main Entry Point - 1 -->
+   <extension id="com.vmware.samples.htmlsample.entryPoint1">
       <extendedPoint>vise.navigator.nodespecs</extendedPoint>
       <object>
          <title>#{pluginName}</title>
@@ -39,6 +39,9 @@
       </object>
    </extension>
 
+
+
+   <!-- Under entryPoint1 -->
    <!-- Welcome Navigator Category Item and Global View -->
    <extension id="com.vmware.samples.htmlsample.welcomeView">
       <extendedPoint>vise.global.views</extendedPoint>
@@ -61,10 +64,11 @@
          <title>#{welcomeNavItem}</title>
          <icon>#{icon-welcome}</icon>
          <navigationTargetUid>com.vmware.samples.htmlsample.welcomeView</navigationTargetUid>
-         <parentUid>com.vmware.samples.htmlsample.entryPoint</parentUid>
+         <parentUid>com.vmware.samples.htmlsample.entryPoint1</parentUid>
       </object>
    </extension>
 
+   <!-- Under entryPoint1 -->
    <!-- Settings Navigator Category Item and Global View -->
    <extension id="com.vmware.samples.htmlsample.settingsView">
       <extendedPoint>vise.global.views</extendedPoint>
@@ -87,10 +91,11 @@
          <title>#{settingsNavItem}</title>
          <icon>#{icon-settings}</icon>
          <navigationTargetUid>com.vmware.samples.htmlsample.settingsView</navigationTargetUid>
-         <parentUid>com.vmware.samples.htmlsample.welcomeView</parentUid>
+         <parentUid>com.vmware.samples.htmlsample.entryPoint1</parentUid>
       </object>
-   </extension> 
+   </extension>
 
+   <!-- Under entryPoint1 -->
    <!-- Chassis Objects List Navigator Category Item and Global View -->
    <extension id="com.vmware.samples.htmlsample.objectsListView">
       <extendedPoint>vise.global.views</extendedPoint>
@@ -113,7 +118,47 @@
          <title>#{chassisListNavItem}</title>
          <icon>#{icon-list}</icon>
          <navigationTargetUid>com.vmware.samples.htmlsample.objectsListView</navigationTargetUid>
-         <parentUid>com.vmware.samples.htmlsample.entryPoint</parentUid>
+         <parentUid>com.vmware.samples.htmlsample.entryPoint1</parentUid>
+      </object>
+   </extension>
+
+
+   <!-- Plugin Navigator Main Entry Point - 2 -->
+   <extension id="com.vmware.samples.htmlsample.entryPoint2">
+      <extendedPoint>vise.navigator.nodespecs</extendedPoint>
+      <object>
+         <title>#{entryPoint2}</title>
+         <icon>#{icon-plugin}</icon>
+         <parentUid>vsphere.core.navigator.solutionsCategory</parentUid>
+         <navigationTargetUid>com.vmware.samples.htmlsample.loginView</navigationTargetUid>
+         <viewOpenedUponFocus className="com.vmware.ui.objectnavigator.views.CategoryNodeTreeView" />
+      </object>
+   </extension>
+
+
+   <!-- Login "Navigator Category Item" and Global View -->
+   <extension id="com.vmware.samples.htmlsample.loginView">
+      <extendedPoint>vise.global.views</extendedPoint>
+      <object>
+         <name>#{loginNavItem}</name>
+         <contentSpec>
+            <url>/ui/html-sample/index.html?view=welcome</url>
+            <metadata>
+               <entry>
+                  <key>hasTitle</key>
+                  <value>false</value>
+               </entry>
+            </metadata>
+         </contentSpec>
+      </object>
+   </extension>
+   <extension id="com.vmware.samples.htmlsample.loginItem">
+      <extendedPoint>vise.navigator.nodespecs</extendedPoint>
+      <object>
+         <title>#{loginNavItem}</title>
+         <icon>#{icon-welcome}</icon>
+         <navigationTargetUid>com.vmware.samples.htmlsample.loginView</navigationTargetUid>
+         <parentUid>com.vmware.samples.htmlsample.entryPoint2</parentUid>
       </object>
    </extension>
 
