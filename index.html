@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- Copyright (c) 2018 VMware, Inc. All rights reserved. -->
+<html>
+<head>
+  <title>vSphere HTML SDK Sample</title>
+  <meta charset="utf-8"/>
+
+  <script>
+
+    (function(){
+      var href = document.location.href;
+      href = href.substring(0, href.indexOf("index.html"));
+      document.write('<base href="' + href + '" />');
+    })();
+  </script>
+</head>
+<body>
+  <!-- Main angular app gets loaded -->
+  <app-root></app-root>
+</body>
+</html>
