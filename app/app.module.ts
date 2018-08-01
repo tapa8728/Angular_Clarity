@@ -11,7 +11,7 @@ import {ClarityIcons} from 'clarity-icons';
 
 import {AppComponent} from './app.component';
 // step1: Add new components here
-import {UserComponent} from './components/user/user.component';
+import {UserComponent} from './components/user/user.components';
 
 import {ChassisService} from './services/chassis.service';
 import {HostsService} from './services/hosts.service';

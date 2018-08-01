@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
 // step2: define a decorator (typescript feature) to add-on features to the component class.
 @Component({
   selector: 'app-user',
-  template: '<h2> John Doe </h2>'
+  //template: '<h2> John Doe </h2>'
+  templateUrl: './components/user/user.components.html',
 })
 
 // step3: define a class for this component.
